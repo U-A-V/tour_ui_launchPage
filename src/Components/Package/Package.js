@@ -1,8 +1,11 @@
 import React from "react";
-function Package() {
+function Package({ pack }) {
+  const { id, title, desc } = pack;
   return (
     <div className="package">
-      <h3></h3>
+      <div className="bar"></div>
+      <h3>{title}</h3>
+      <p>{desc}</p>
     </div>
   );
 }
