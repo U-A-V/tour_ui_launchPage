@@ -1,11 +1,26 @@
 @import url("https://fonts.googleapis.com/css2?family=Andika+New+Basic&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Andika+New+Basic&family=EB+Garamond:ital@1&display=swap");
 * {
   font-family: 'Andika New Basic';
   overflow-x: hidden;
+  font-size: 16px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  color: #fff;
+}
+
+body {
+  background-color: #202629;
+  height: 100%;
+  margin: 0;
 }
 
 .header {
+  position: fixed;
   overflow: hidden;
+  width: 100vw;
+  height: 3rem;
+  z-index: 20;
 }
 
 .header .logo {
@@ -46,8 +61,7 @@
 }
 
 .header .tour-top-right {
-  float: right;
-  margin: -40px 50px;
+  margin: -40px 7.25rem 0 78rem;
 }
 
 .header .tour-top-right a {
@@ -58,10 +72,9 @@
 }
 
 .hero {
-  position: absolute;
-  top: 0;
-  left: 0;
+  margin: 0;
   z-index: -1;
+  width: 100vw;
 }
 
 .hero .bg-hero {
@@ -77,21 +90,139 @@
 
 .hero .info {
   position: absolute;
-  top: 9em;
-  left: 6em;
+  top: 9rem;
+  left: 6rem;
   color: #fff;
 }
 
 .hero .info .title {
   font-size: 72px;
+  margin-left: -.2rem;
 }
 
 .hero .info .desc {
-  margin-top: -1.5em;
+  margin-top: -4rem;
   font-size: 36px;
 }
 
 .hero .info .desc span {
   display: block;
+  font-size: 36px;
+}
+
+.hero .packages-left {
+  z-index: 1;
+  position: absolute;
+  right: 0;
+  top: 14rem;
+  width: 38rem;
+  height: 31rem;
+  background: rgba(0, 0, 0, 0.4);
+  overflow-y: scroll;
+}
+
+.hero .packages-left:before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: -1;
+  -webkit-box-shadow: inset 0 0 2000px rgba(0, 0, 0, 0.5);
+          box-shadow: inset 0 0 2000px rgba(0, 0, 0, 0.5);
+  -webkit-filter: blur(10px);
+          filter: blur(10px);
+}
+
+.package {
+  width: 38rem;
+  height: auto;
+  color: #fff;
+  z-index: 2;
+  padding: 1rem 5rem;
+  cursor: pointer;
+}
+
+.package .bar {
+  height: 10rem;
+  width: 1px;
+  position: absolute;
+  left: 0;
+  border: 3px solid #fff;
+  display: block;
+  opacity: 0;
+}
+
+.package:hover .bar {
+  -webkit-animation: fadein .5s ease-in-out forwards;
+          animation: fadein .5s ease-in-out forwards;
+}
+
+@-webkit-keyframes fadein {
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes fadein {
+  100% {
+    opacity: 1;
+  }
+}
+
+.action {
+  position: absolute;
+  top: 30.05rem;
+  text-align: center;
+  width: 36.813rem;
+  height: 15rem;
+  background: rgba(49, 57, 62, 0.3);
+  left: 20.2rem;
+}
+
+.action h3 {
+  margin: 6.5rem;
+}
+
+.action:hover {
+  background: white;
+  cursor: pointer;
+}
+
+.action:hover h3 {
+  color: #000;
+}
+
+.right-block {
+  position: absolute;
+  top: 30.05rem;
+  width: 20.2rem;
+  height: 100%;
+  background: #31393E;
+}
+
+.tour {
+  z-index: 2;
+  position: absolute;
+  width: 100vw;
+  background: transparent;
+  overflow: hidden;
+}
+
+.tour .watermark {
+  margin: -10rem -71px;
+  width: 200vw;
+  overflow: hidden;
+  height: 800px;
+}
+
+.tour .watermark h1 {
+  overflow: hidden;
+  font-family: 'EB Garamond';
+  font-weight: normal;
+  font-size: 288px;
+  line-height: 324px;
+  color: rgba(255, 255, 255, 0.04);
 }
 /*# sourceMappingURL=index.css.map */
